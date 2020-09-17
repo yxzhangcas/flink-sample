@@ -1,1 +1,3 @@
-# flink-sample
+# Flink样例代码
+
+本仓库用于存放个人编写的各种Flink样例代码

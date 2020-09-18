@@ -20,6 +20,7 @@ object MultiStreamTransformations {
     val keyed = tempReadings
       .keyBy(_.id)
     val alerts = keyed
+      //将第二条输入流广播，保持与第一条流的关联
       .connect(smokeReadings.broadcast)
       .flatMap(new RaiseAlertFlatMap)
 

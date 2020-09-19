@@ -6,7 +6,7 @@ import util.{Alert, SensorReading, SmokeLevel}
 import util.SmokeLevel.SmokeLevel
 
 class RaiseAlertFlatMap extends CoFlatMapFunction[SensorReading, SmokeLevel, Alert] {
-  var smokeLevel = SmokeLevel.Low
+  var smokeLevel: SmokeLevel = SmokeLevel.Low
   /*
   类似于流和表的Join：
     算子本地缓存维护了其中一个流的快照信息（这里就是smokeLevel)，并在流消息到达时更新本地快照

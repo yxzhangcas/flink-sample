@@ -8,6 +8,7 @@ import org.apache.flink.util.Collector
 import util.SensorReading
 
 class ReadingFilter extends CoProcessFunction[SensorReading, (String, Long), SensorReading] {
+  //lazy方式对应于在Java语言中调用open方法时进行的操作
   lazy val forwardingEnabled: ValueState[Boolean] =
     getRuntimeContext.getState(new ValueStateDescriptor[Boolean]("filterSwitch", Types.of[Boolean]))
   lazy val disableTimer: ValueState[Long] =

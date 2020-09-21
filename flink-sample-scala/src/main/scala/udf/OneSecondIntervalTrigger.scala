@@ -30,7 +30,6 @@ class OneSecondIntervalTrigger extends Trigger[SensorReading, TimeWindow] {
   override def onProcessingTime(time: Long, window: TimeWindow, ctx: Trigger.TriggerContext): TriggerResult = {
     TriggerResult.CONTINUE
   }
-
   override def clear(window: TimeWindow, ctx: Trigger.TriggerContext): Unit = {
     val firstSeen = ctx.getPartitionedState(new ValueStateDescriptor[Boolean]("firstSeen", classOf[Boolean]))
     firstSeen.clear()

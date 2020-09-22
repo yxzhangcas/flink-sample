@@ -9,7 +9,7 @@ import org.apache.flink.queryablestate.client.QueryableStateClient
 object TemperatureDashboard {
   val proxyHost = "127.0.0.1"
   val proxyPort = 9069
-  val jobId = "e8bdc34aea6e31e60a8a337a8f4221de"
+  val jobId = "e8bdc34aea6e31e60a8a337a8f4221de"  //这里的JobID需要根据实际运行的服务来确定，应该也有接口可以获取
   val numSensors = 5
   val refreshInterval = 1000
 

@@ -51,6 +51,13 @@
             <artifactId>flink-queryable-state-client-java_${scala.binary.version}</artifactId>
             <version>${flink.version}</version>
         </dependency>
+        <!-- derby -->
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.14.2.0</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- log -->
         <dependency>
             <groupId>org.slf4j</groupId>

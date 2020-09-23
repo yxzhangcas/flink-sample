@@ -5,6 +5,10 @@ import org.apache.flink.api.scala._
 import org.apache.flink.table.api.TableEnvironment
 import org.apache.flink.table.api.scala._
 
+/*
+此功能未经过实际运行测试
+ */
+
 object TPCHQuery3Table {
   /*
   USAGE: TPCHQuery3Expression <lineitem-csv path> <customer-csv path> <orders-csv path> <result path>

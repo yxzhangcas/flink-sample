@@ -7,7 +7,7 @@ import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 import org.apache.flink.types.Row;
 
-public class KafkaSourceSQL {
+public class KafkaToPrintSQL {
     final static String ddlKafka =
             "CREATE TABLE TestKafka(" +
                     "value1 STRING, " +
@@ -61,3 +61,9 @@ public class KafkaSourceSQL {
         env.execute();
     }
 }
+
+/*
+kafka-console-producer.sh --broker-list localhost:9092 --topic test_kafka
+>a|b
+>c|d
+ */
